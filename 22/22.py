@@ -15,7 +15,7 @@ def add(x, y):
 
 def names_score(names):
     return reduce(add,
-                  map(lambda name, index: (index + 1) * reduce(add, map(lambda letter: score(letter, -64), list(name))),
+                  map(lambda name, index: (index + 1) * reduce(add, map(lambda letter: score(letter, -ord("A")), list(name))),
                       names, range(len(names))))
 
 
